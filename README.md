@@ -8,14 +8,23 @@ This is eclectic collection of code that don't follow coherent topic. It should
 be treated not as "3rd util package" but more as "utilities from legacy
 codebase".
 
-## Modules
+## Functions
 
 - [Object functions](./obj.ts)
+  - [x] `flatten`
+  - [ ] `walk`
 - [Date & Time](./time.ts)
+  - [x] `getSecondsDiff`
 - [String operations](./string.ts)
+  - [x] `camelize`
+  - [ ] `capitalise`
 - [Env variables](./env.ts)
+  - [x] `validateSecret`
 - [Hashing](./hash.ts)
+  - [x] `djb2`
+  - [x] `assignToBucket`
 - [Containers (Docker)](./oci.ts)
+  - [x] `startDocker`
 
 ## Docs
 
