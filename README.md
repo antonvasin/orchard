@@ -1,6 +1,8 @@
 # ts-utils
 
-Collection of TypeScript utils for everyday use.
+Collection of TypeScript utils for everyday use. Written in Deno to be simple
+and without external dependencies. These functions are small and can easily be
+copy-pasted into codebase.
 
 ## Docs
 
