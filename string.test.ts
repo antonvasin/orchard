@@ -5,26 +5,27 @@ Deno.test("camelise", async (t) => {
   await t.step("kebab-case", () => {
     assertEquals(camelize("kebab-cased-string"), "kebabCasedString");
     assertEquals(
-      camelize("inconsistent-kEBab-cased-stRIng"),
-      "inconsistentKebabCasedString",
+      camelize("screaming-kebab-cased-string"),
+      "screamingKebabCasedString",
     );
   });
 
   await t.step("snake_case", () => {
     assertEquals(camelize("snake_cased_string"), "snakeCasedString");
     assertEquals(
-      camelize("incOnsisteNt_snake_cased_string"),
-      "inconsistentSnakeCasedString",
+      camelize("SCREAMING_SNAKE_CASED_STRING"),
+      "screamingSnakeCasedString",
     );
   });
 
   await t.step("string with spaces", () => {
-    assertEquals(camelize("string witH SpaceS"), "stringWithSpaces");
+    assertEquals(camelize("string with Spaces"), "stringWithSpaces");
+    assertEquals(camelize("CAPS LOCK STRING"), "capsLockString");
   });
 
   await t.step("mixed case", () => {
     assertEquals(
-      camelize("string with spaces_and_snakes-with-kebabs"),
+      camelize("string WITH spaces_and_snakes-with-kebabs"),
       "stringWithSpacesAndSnakesWithKebabs",
     );
   });
