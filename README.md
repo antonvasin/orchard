@@ -26,8 +26,8 @@ codebase".
   - [x] `assignToBucket`
 - [Containers (Docker)](./oci.ts)
   - [x] `startDocker`
-- HTTP
-  - [ ] `apiClient`
+- [HTTP](./http.ts)
+  - [x] `getClient`
 - Resilience
   - [ ] `throttle`
   - [ ] `debounce`
