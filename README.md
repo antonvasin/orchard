@@ -17,6 +17,7 @@ codebase".
   - [x] `getSecondsDiff`
 - [String operations](./string.ts)
   - [x] `camelize`
+  - [ ] `envCase`
   - [ ] `capitalise`
 - [Env variables](./env.ts)
   - [x] `validateSecret`
@@ -25,6 +26,13 @@ codebase".
   - [x] `assignToBucket`
 - [Containers (Docker)](./oci.ts)
   - [x] `startDocker`
+- HTTP
+  - [ ] `apiClient`
+- Resilience
+  - [ ] `throttle`
+  - [ ] `debounce`
+  - [ ] `timeout`
+  - [ ] `circuitBreaker`
 
 ## Docs
 
