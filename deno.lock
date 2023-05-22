@@ -105,6 +105,7 @@
       "camelize-ts": "camelize-ts@3.0.0",
       "flat": "flat@5.0.2",
       "flattie": "flattie@1.1.0",
+      "humps": "humps@2.0.1",
       "lodash.camelcase": "lodash.camelcase@4.3.0"
     },
     "packages": {
@@ -118,6 +119,10 @@
       },
       "flattie@1.1.0": {
         "integrity": "sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==",
+        "dependencies": {}
+      },
+      "humps@2.0.1": {
+        "integrity": "sha512-E0eIbrFWUhwfXJmsbdjRQFQPrl5pTEoKlz163j1mTqqUnU9PgR4AgB8AIITzuB3vLBdxZXyZ9TDIrwB2OASz4g==",
         "dependencies": {}
       },
       "lodash.camelcase@4.3.0": {
