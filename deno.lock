@@ -103,11 +103,21 @@
   "npm": {
     "specifiers": {
       "camelize-ts": "camelize-ts@3.0.0",
+      "flat": "flat@5.0.2",
+      "flattie": "flattie@1.1.0",
       "lodash.camelcase": "lodash.camelcase@4.3.0"
     },
     "packages": {
       "camelize-ts@3.0.0": {
         "integrity": "sha512-cgRwKKavoDKLTjO4FQTs3dRBePZp/2Y9Xpud0FhuCOTE86M2cniKN4CCXgRnsyXNMmQMifVHcv6SPaMtTx6ofQ==",
+        "dependencies": {}
+      },
+      "flat@5.0.2": {
+        "integrity": "sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==",
+        "dependencies": {}
+      },
+      "flattie@1.1.0": {
+        "integrity": "sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==",
         "dependencies": {}
       },
       "lodash.camelcase@4.3.0": {
