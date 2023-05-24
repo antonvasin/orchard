@@ -1,4 +1,5 @@
-import { camelizeKeys } from "./obj.ts";
+import { assertEquals } from "https://deno.land/std@0.188.0/testing/asserts.ts";
+import { camelizeKeys, walkDeep } from "./obj.ts";
 import { assert } from "./test_deps.ts";
 
 Deno.test("camelizeKeys", () => {
@@ -19,4 +20,22 @@ Deno.test("camelizeKeys", () => {
   assert(res.userObj);
   assert(res.userObj.createdAt);
   assert(!res["user_obj"]);
+});
+
+Deno.test("walkDeep", () => {
+  const obj = {
+    foo: {
+      nested: {
+        field: "bar",
+      },
+    },
+    baz: {
+      oof: "foofoo",
+    },
+  };
+
+  let visits = 0;
+
+  walkDeep(obj, () => visits++);
+  assertEquals(visits, 5);
 });
