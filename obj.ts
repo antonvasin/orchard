@@ -74,3 +74,33 @@ export function walkDeep(
     }
   }
 }
+
+export function matchObj(
+  ctx: Record<string, unknown>,
+  cond: Record<string, unknown>,
+) {
+  let match = false;
+  let curParent = ctx;
+
+  walkDeep(cond, (k, p) => {
+    const v = p[k];
+    const cV = curParent[k];
+
+    console.log({ k, v, cV, curParent });
+    if (cV === undefined) {
+      return;
+    }
+
+    if (cV === v) {
+      match = true;
+    } else if (Array.isArray(cV) && cV.includes(v)) {
+      match = true;
+    }
+
+    if (isObject(cV)) {
+      curParent = cV;
+    }
+  });
+
+  return match;
+}
