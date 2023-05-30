@@ -34,6 +34,10 @@ export function distance(x0: number, y0: number, x1: number, y1: number) {
   return Math.hypot(x1 - x0, y1 - y0);
 }
 
+export function isBetween(n: number, a: number, b: number) {
+  return (n > a && n < b) || (n > b && n < a);
+}
+
 export function collideRect(
   x1: number,
   y1: number,
@@ -43,4 +47,10 @@ export function collideRect(
   y2: number,
   width2: number,
   height2: number,
-): boolean;
+): boolean {
+  const intersectX = isBetween(x1, x2, x2 + width2) ||
+    isBetween(x2, x1, x1 + width1);
+  const intersectY = isBetween(y1, y2, y2 + height2) ||
+    isBetween(y2, y1, y1 + height1);
+  return intersectX && intersectY;
+}

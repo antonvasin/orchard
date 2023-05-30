@@ -25,7 +25,7 @@ modules.
   - [x] `range`
   - [x] `invlerp`
   - [x] `distance`
-  - [ ] `collideRect`
+  - [x] `collideRect`
 - [String](./string.ts)
   - [x] `camelize`
   - [x] `toSlug`

@@ -1,6 +1,5 @@
-import { assertEquals } from "https://deno.land/std@0.188.0/testing/asserts.ts";
+import { assert, assertEquals } from "./test_deps.ts";
 import { camelizeKeys, walkDeep } from "./obj.ts";
-import { assert } from "./test_deps.ts";
 
 Deno.test("camelizeKeys", () => {
   const obj = {
