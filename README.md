@@ -29,7 +29,7 @@ modules.
 - [String](./string.ts)
   - [x] `camelize`
   - [ ] `envCase`
-  - [ ] `toSlug`
+  - [x] `toSlug`
   - [x] `hammingDistance`
   - [x] `truncate`
 - [Date & Time](./time.ts)

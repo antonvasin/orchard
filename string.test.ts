@@ -1,4 +1,4 @@
-import { camelize } from "./string.ts";
+import { camelize, toSlug } from "./string.ts";
 import { assertEquals } from "./test_deps.ts";
 
 Deno.test("camelise", async (t) => {
@@ -34,6 +34,15 @@ Deno.test("camelise", async (t) => {
     assertEquals(
       camelize("initialize_SDK_with_options"),
       "initializeSdkWithOptions",
+    );
+  });
+});
+
+Deno.test("toSlug", async (t) => {
+  await t.step("string with spaces", () => {
+    assertEquals(
+      toSlug("Chapter 1: Hello World (again)"),
+      "chapter-1-hello-world-again",
     );
   });
 });

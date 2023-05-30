@@ -43,3 +43,7 @@ export function truncate(str: string, num = 50, ellipsis = "…"): string {
       ellipsis
     : str;
 }
+
+export function toSlug(str: string): string {
+  return str.toLowerCase().split(" ").join("-").replace(/[^a-zA-Z0-9-_]/g, "");
+}
