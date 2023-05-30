@@ -1,7 +1,7 @@
+import { assert } from "./control.ts";
+
 export function random(min = 0, max = 1, bias = 0): number {
-  if (bias < 0 || bias > 1) {
-    throw new Error("Bias must be a value between 0 and 1.");
-  }
+  assert(bias < 0 || bias > 1, "Bias must be a value between 0 and 1.");
 
   const value = Math.pow(Math.random(), 1 - bias) * (max - min) + min;
 

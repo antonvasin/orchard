@@ -1,3 +1,5 @@
+import { assert } from "./control.ts";
+
 /** Converts kebab-, snake-cased or whitespaced string to camelCase */
 export function camelize(str: string) {
   let camelized = "";
@@ -22,9 +24,7 @@ export function camelize(str: string) {
 }
 
 export function hammingDistance(str1: string, str2: string): number {
-  if (str1.length !== str2.length) {
-    throw new Error("Strings should be the same length");
-  }
+  assert(str1.length !== str2.length, "Strings should be the same length");
 
   let count = 0;
 
