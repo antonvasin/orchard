@@ -35,3 +35,10 @@ export function throttle<T extends Array<unknown>>(
 export function wait(time = 1) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
+
+export function timeout<R, T extends unknown[]>(
+  fn: (...args: T) => Promise<R>,
+  timeout = 250,
+) {
+  return (...args: T) => Promise.race([fn(...args), wait(timeout)]);
+}

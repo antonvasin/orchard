@@ -28,7 +28,6 @@ modules.
   - [ ] `collideRect`
 - [String](./string.ts)
   - [x] `camelize`
-  - [ ] `envCase`
   - [x] `toSlug`
   - [x] `hammingDistance`
   - [x] `truncate`
@@ -46,9 +45,10 @@ modules.
 - [Localisation](./l18n.ts)
   - [x] `currency`]
 - [Async](./async)
-  - [ ] `throttle`
-  - [ ] `debounce`
-  - [ ] `timeout`
+  - [x] `throttle`
+  - [x] `debounce`
+  - [x] `wait`
+  - [x] `timeout`
   - [ ] `circuitBreaker`
 
 ## Docs
