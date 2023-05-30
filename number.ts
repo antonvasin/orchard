@@ -10,3 +10,7 @@ export function getRandomValue(bias = 0, max = 1): number {
   const randomValue = Math.random();
   return Math.pow(randomValue, bias) * max;
 }
+
+export function clamp(num: number, min: number, max: number) {
+  return Math.max(Math.min(num, Math.max(min, max)), Math.min(min, max));
+}
