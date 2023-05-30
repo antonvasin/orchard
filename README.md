@@ -18,11 +18,21 @@ modules.
   - [x] `flatten`
   - [x] `camelizeKeys`
   - [x] `walkDeep`
-- [Date & Time](./time.ts)
-  - [x] `getSecondsDiff`
-- [String operations](./string.ts)
+- [Number](./number.ts)
+  - [x] `random`
+  - [x] `lerp`
+  - [x] `clamp`
+  - [x] `range`
+  - [x] `invlerp`
+  - [x] `distance`
+  - [ ] `collideRect`
+- [String](./string.ts)
   - [x] `camelize`
   - [ ] `envCase`
+  - [ ] `toSlug`
+  - [ ] `hammingDistance`
+- [Date & Time](./time.ts)
+  - [x] `getSecondsDiff`
 - [Env variables](./env.ts)
   - [x] `validateSecret`
 - [Hashing](./hash.ts)
@@ -32,7 +42,9 @@ modules.
   - [x] `startDocker`
 - [HTTP](./http.ts)
   - [x] `getClient`
-- Behaviour
+- [Localisation](./l18n.ts)
+  - [x] `currency`]
+- [Async](./async)
   - [ ] `throttle`
   - [ ] `debounce`
   - [ ] `timeout`
