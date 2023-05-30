@@ -43,13 +43,16 @@ modules.
 - [HTTP](./http.ts)
   - [x] `getClient`
 - [Localisation](./l18n.ts)
-  - [x] `currency`]
-- [Async](./async)
+  - [x] `currency`
+- [Async](./async.ts)
   - [x] `throttle`
   - [x] `debounce`
   - [x] `wait`
   - [x] `timeout`
   - [ ] `circuitBreaker`
+- [Control](./control.ts)
+  - [x] `assert`
+  - [x] `unreachable`
 
 ## Docs
 
