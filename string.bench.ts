@@ -1,4 +1,4 @@
-import { camelize } from "./string.ts";
+import { camelize, hammingDistance } from "./string.ts";
 import lodashCamel from "npm:lodash.camelcase";
 import camelizeTs from "npm:camelize-ts";
 import humps from "npm:humps";
@@ -32,4 +32,8 @@ Deno.bench("* camelize", { group: "string.camelize" }, () => {
 
 Deno.bench("humps", { group: "string.camelize" }, () => {
   humps.camelize(stringToCamel);
+});
+
+Deno.bench("hammingDistance", { group: "hammingDistance" }, () => {
+  hammingDistance("jsdoidlkvjoaisdvjdoflkavkj", "jsdoifja3wfjawjfdoiafjodia");
 });

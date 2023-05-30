@@ -30,7 +30,8 @@ modules.
   - [x] `camelize`
   - [ ] `envCase`
   - [ ] `toSlug`
-  - [ ] `hammingDistance`
+  - [x] `hammingDistance`
+  - [x] `truncate`
 - [Date & Time](./time.ts)
   - [x] `getSecondsDiff`
 - [Env variables](./env.ts)
