@@ -1,4 +1,4 @@
-export function assert(cond: unknown, msg: string): asserts cond {
+export function assert(cond: unknown, msg = "Assertion error"): asserts cond {
   if (!cond) {
     throw new Error(msg);
   }
