@@ -53,6 +53,8 @@ modules.
 - [Control](./control.ts)
   - [x] `assert`
   - [x] `unreachable`
+- [ESM](./esm.ts)
+  - [x] `reimport`
 
 ## Docs
 
