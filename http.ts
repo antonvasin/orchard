@@ -11,7 +11,7 @@ type FetchParams = Parameters<Fetch>;
  * const dogs = await api('https://api.dogs.awesome') // => { dogs: [ { name: 'Rex' }, { name: 'Bella' } ] }
  * ````
  */
-export function getClient(fetch: Fetch, defaultOpts?: FetchParams[1]): Fetch {
+export function getClient(fetch: Fetch, defaultOpts?: FetchParams[1]) {
   return async <T extends Record<string, unknown>>(
     ...params: FetchParams
   ): Promise<T | string> => {
@@ -24,7 +24,7 @@ export function getClient(fetch: Fetch, defaultOpts?: FetchParams[1]): Fetch {
     const isJson = res.headers.get("content-type")?.includes(
       "application/json",
     );
-    const result = isJson ? await res.json() : await res.text();
+    const result = isJson ? (await res.json() as T) : await res.text();
 
     if (res.ok) {
       return result;

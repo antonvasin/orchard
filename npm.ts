@@ -8,7 +8,11 @@ await build({
   entryPoints: ["./mod.ts"],
   test: false,
   outDir,
-  shims: {},
+  shims: {
+    timers: true,
+    deno: true,
+    undici: true,
+  },
   package: {
     // package.json properties
     name: "ts-utils",

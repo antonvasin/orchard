@@ -1,5 +1,3 @@
-import { assert } from "./control.ts";
-
 /** Returns difference in seconds between two ISO dates */
 export function getSecondsDiff(
   start: string | number | Date,
@@ -39,15 +37,18 @@ export function isBetweenDates(
   date: Date,
   range: string | [Date, Date],
 ): boolean {
-  const val = date.getTime();
-  let start: number;
-  let end: number;
+  let start: Date;
+  let end: Date;
 
   if (typeof range === "string" && range.indexOf("/") !== -1) {
-    [start, end] = range.split("/").map((d) => new Date(d).getTime()).sort();
+    [start, end] = range.split("/").map((d) => new Date(d)).sort((a, b) =>
+      a.getTime() - b.getTime()
+    );
   } else {
-    [start, end] = (range as [Date, Date]).map((d) => d.getTime()).sort();
+    [start, end] = (range as [Date, Date]).sort((a, b) =>
+      a.getTime() - b.getTime()
+    );
   }
 
-  return isAfter(val, start) && isBefore(val, end);
+  return isAfter(date, start) && isBefore(date, end);
 }
