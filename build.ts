@@ -16,7 +16,7 @@ await build({
   package: {
     // package.json properties
     name: "ts-utils",
-    version: Deno.args[0],
+    version: Deno.args[0] || "0.1.0-alpha.1",
     description: "Small everyday TypeScript utils with no dependencies",
     license: "MIT",
     repository: {
