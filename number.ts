@@ -55,3 +55,11 @@ export function collideRect(
     isBetween(y2, y1, y1 + height1);
   return intersectX && intersectY;
 }
+
+export function degToRad(deg: number) {
+  return deg * (Math.PI / 180);
+}
+
+export function radToDeg(rad: number) {
+  return rad * (180 / Math.PI);
+}
