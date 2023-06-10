@@ -20,37 +20,15 @@ export function invlerp(a: number, b: number, n: number) {
   return clamp((n - a) / (b - a));
 }
 
-/** Given min and max returns float in 0..1 range for n  */
-export function normalise(min: number, max: number, n: number) {
-  return (n - min) / (max - min);
-}
-
-/** Scales number from range 'a' to range 'b', clamping output to range 'b'. */
 export function scale(
-  aMin: number,
-  aMax: number,
-  bMin: number,
-  bMax: number,
-  n: number,
-  scaleFn: (n: number) => number = (n) => n,
-) {
-  if (n < aMin) {
-    return bMin;
-  } else if (n > aMax) {
-    return bMax;
-  }
-
-  return (bMax - bMin) * scaleFn(normalise(aMin, aMax, n)) + bMin;
-}
-
-export function range(
   a1: number,
   b1: number,
   a2: number,
   b2: number,
   n: number,
+  scaleFn: (n: number) => number = (n) => n,
 ) {
-  return lerp(a2, b2, invlerp(a1, b1, n));
+  return lerp(a2, b2, scaleFn(invlerp(a1, b1, n)));
 }
 
 export function distance(x0: number, y0: number, x1: number, y1: number) {
