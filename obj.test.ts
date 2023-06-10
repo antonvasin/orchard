@@ -1,5 +1,5 @@
 import { assert, assertEquals } from "./test_deps.ts";
-import { camelizeKeys, walkDeep } from "./obj.ts";
+import { camelizeKeys, matchObj, walkDeep } from "./obj.ts";
 
 Deno.test("camelizeKeys", () => {
   const obj = {
@@ -37,4 +37,21 @@ Deno.test("walkDeep", () => {
 
   walkDeep(obj, () => visits++);
   assertEquals(visits, 5);
+});
+
+Deno.test("matchObj", () => {
+  const obj = {
+    foo: {
+      nested: {
+        field: "bar",
+      },
+    },
+    baz: {
+      oof: "foofoo",
+    },
+  };
+
+  assert(matchObj(obj, { foo: { nested: { field: "bar" } } }));
+  assert(!matchObj(obj, { foo: "bar" }));
+  assert(!matchObj({}, {}));
 });

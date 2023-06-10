@@ -86,7 +86,6 @@ export function matchObj(
     const v = p[k];
     const cV = curParent[k];
 
-    console.log({ k, v, cV, curParent });
     if (cV === undefined) {
       return;
     }
