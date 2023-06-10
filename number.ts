@@ -20,6 +20,28 @@ export function invlerp(a: number, b: number, n: number) {
   return clamp((n - a) / (b - a));
 }
 
+/** Given min and max returns float in 0..1 range for n  */
+export function normalise(min: number, max: number, n: number) {
+  return (n - min) / (max - min);
+}
+
+/** Scales number from range 'a' to range 'b', clamping output to range 'b'. */
+export function scale(
+  aMin: number,
+  aMax: number,
+  bMin: number,
+  bMax: number,
+  n: number,
+) {
+  if (n < aMin) {
+    return bMin;
+  } else if (n > aMax) {
+    return bMax;
+  }
+
+  return (bMax - bMin) * normalise(aMin, aMax, n) + bMin;
+}
+
 export function range(
   a1: number,
   b1: number,
