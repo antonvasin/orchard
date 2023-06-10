@@ -32,6 +32,7 @@ export function scale(
   bMin: number,
   bMax: number,
   n: number,
+  scaleFn: (n: number) => number = (n) => n,
 ) {
   if (n < aMin) {
     return bMin;
@@ -39,7 +40,7 @@ export function scale(
     return bMax;
   }
 
-  return (bMax - bMin) * normalise(aMin, aMax, n) + bMin;
+  return (bMax - bMin) * scaleFn(normalise(aMin, aMax, n)) + bMin;
 }
 
 export function range(
