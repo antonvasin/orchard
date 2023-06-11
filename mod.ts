@@ -1,6 +1,11 @@
+export * as async from "./async.ts";
+export * as control from "./control.ts";
 export * as env from "./env.ts";
+export * as esm from "./esm.ts";
 export * as hash from "./hash.ts";
 export * as http from "./http.ts";
+export * as l18n from "./l18n.ts";
+export * as number from "./number.ts";
 export * as obj from "./obj.ts";
 export * as oci from "./oci.ts";
 export * as string from "./string.ts";
