@@ -1,4 +1,4 @@
-# ts-utils
+# orchard
 
 Collection of TypeScript utils for everyday use. Written in Deno to be simple
 and without external dependencies. These functions are small and don't share too
