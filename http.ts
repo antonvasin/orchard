@@ -37,3 +37,24 @@ export function getClient(fetch: Fetch, defaultOpts?: FetchParams[1]) {
     }
   };
 }
+
+/**
+ * Creates 'Ok' Response
+ *
+ * @xample
+ * ```ts
+ * return created ? ok(201, 'Created') : ok();
+ * ```
+ */
+export const ok = (status = 200, msg = "Ok") => new Response(msg, { status });
+
+/**
+ * Creates 'Error' Response
+ *
+ * @xample
+ * ```ts
+ * return err(404, 'Not Found');
+ * ```
+ */
+export const err = (status = 400, msg = "Bad Request") =>
+  new Response(msg, { status });
