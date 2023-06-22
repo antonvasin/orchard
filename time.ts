@@ -52,3 +52,28 @@ export function isBetweenDates(
 
   return isAfter(date, start) && isBefore(date, end);
 }
+
+/** Takes duration in ms and returns duration in human readable format */
+export function formatDuration(duration: number) {
+  const milliseconds = Math.floor(duration % 1000);
+  const seconds = Math.floor((duration / 1000) % 60);
+  const minutes = Math.floor((duration / (1000 * 60)) % 60);
+  const hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+  let timeString = "";
+
+  if (hours > 0) {
+    timeString += hours + "h";
+  }
+  if (minutes > 0) {
+    timeString += minutes + "m";
+  }
+  if (seconds > 0) {
+    timeString += seconds + "s";
+  }
+  if (milliseconds > 0) {
+    timeString += milliseconds + "ms";
+  }
+
+  return timeString;
+}
