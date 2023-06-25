@@ -1,6 +1,6 @@
 {
   "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
   "tasks": {
-    "build-npm": "deno run --allow-all build.ts"
+    "build": "deno run --allow-net --allow-env --allow-read --allow-write _build_npm.ts"
   }
 }
