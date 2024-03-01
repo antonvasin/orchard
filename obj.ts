@@ -103,3 +103,6 @@ export function matchObj(
 
   return match;
 }
+
+/** Creates typed object without prototype */
+export const o = <T = unknown>() => Object.create(null) as T;
