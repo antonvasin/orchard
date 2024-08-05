@@ -51,3 +51,7 @@ export function toSlug(str: string): string {
 export function insertAt(str: string, idx: number, append: string) {
   return str.slice(0, idx) + append + str.slice(idx);
 }
+
+export function abc(idx: number) {
+  return String.fromCharCode("A".charCodeAt(0) + idx);
+}
